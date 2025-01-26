@@ -7,10 +7,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
-    location: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
     latitude: {
       type: DataTypes.DECIMAL(10,8),
       allowNull: false
@@ -23,6 +19,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.ENUM('active','inactive'),
       allowNull: true,
       defaultValue: "active"
+    },
+    address: {
+      type: DataTypes.STRING(255),
+      allowNull: false
     }
   }, {
     sequelize,

@@ -20,6 +20,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(100),
       allowNull: true
     },
+    password: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+      comment: "Пароль пользователя"
+    },
     isAdmin: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
@@ -28,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     sequelize,
     tableName: 'users',
-    timestamps: true,
+    timestamps: false,
     indexes: [
       {
         name: "PRIMARY",

@@ -31,10 +31,6 @@ module.exports = function(sequelize, DataTypes) {
         key: 'id'
       }
     },
-    gpu_name: {
-      type: DataTypes.STRING(100),
-      allowNull: false
-    },
     status: {
       type: DataTypes.ENUM('created','in_progress','completed','paid'),
       allowNull: true,
@@ -47,6 +43,15 @@ module.exports = function(sequelize, DataTypes) {
     postamat_pickup_code: {
       type: DataTypes.STRING(20),
       allowNull: false
+    },
+    gpu_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      comment: "Ссылка на видеокарту",
+      references: {
+        model: 'gpus',
+        key: 'id'
+      }
     }
   }, {
     sequelize,
@@ -80,6 +85,13 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "postamat_id" },
+        ]
+      },
+      {
+        name: "gpu_id",
+        using: "BTREE",
+        fields: [
+          { name: "gpu_id" },
         ]
       },
     ]
