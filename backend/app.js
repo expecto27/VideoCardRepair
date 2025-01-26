@@ -10,6 +10,14 @@ db.sequelize.sync({force: false});
 
 app.listen(3000);
 
+var cors = require('cors');
+var corsOptions = {
+    origin: 'http://localhost:4200', 
+    credentials: true, 
+    optionSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
 var user = require('./app/route/user');
 user(app);
 var request = require('./app/route/request.js');
