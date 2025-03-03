@@ -29,7 +29,8 @@ exports.update = (req, res) => {
     Postamat.update({
         address: req.body.address,
         latitude: req.body.latitude,
-        longitude: req.body.longitude
+        longitude: req.body.longitude,
+        availability: req.body.availability,
         },
         {
             where: { id: req.params.id }

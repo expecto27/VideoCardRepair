@@ -5,7 +5,7 @@ var Review = db.reviews;
 
 exports.findAll = (req, res) => {
     db.sequelize.query(
-        `SELECT * FROM reviews`, { // запрос SQL
+        `SELECT * FROM reviews r JOIN users u ON r.user_id = u.id JOIN services s ON s.id = r.service_id`, {
             type: db.sequelize.QueryTypes.SELECT
         })
         .then(objects => {
@@ -17,16 +17,25 @@ exports.findAll = (req, res) => {
 };
 
 exports.create = (req, res) => {
-    Review.create({
-        description: req.body.description,
-        rating: req.body.rating,
-        user_id: req.body.user_id, 
-        service_id: req.body.service_id,
-    }).then(object => {
-        globalFunctions.sendResult(res, object);
-    }).catch(err => {
-        globalFunctions.sendError(res, err);
+    const { description, rating, user_id, service_id } = req.body;
+
+    const query = `
+        INSERT INTO reviews (opinion, rating, user_id, service_id)
+        VALUES (:description, :rating, :user_id, :service_id);
+    `;
+
+    db.sequelize.query(query, {
+        replacements: { description, rating, user_id, service_id },
+        type: db.sequelize.QueryTypes.INSERT
     })
+    .then(([result]) => {
+        // Если нужно вернуть результат вставки (например, ID вставленной записи)
+        res.status(201).json({ message: 'Review created successfully', result });
+    })
+    .catch(err => {
+        console.error('Error creating review:', err);
+        res.status(500).json({ message: 'Error creating review', error: err });
+    });
 };
 
 exports.update = (req, res) => {

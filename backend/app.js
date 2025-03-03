@@ -24,6 +24,8 @@ var request = require('./app/route/request.js');
 request(app);
 var postmat = require('./app/route/postmat.js');
 postmat(app);
+var auth = require('./app/route/auth.js');
+auth(app);
 //var payments = require('./app/route/payment.js');
 //payments(app);
 var service = require('./app/route/service.js');

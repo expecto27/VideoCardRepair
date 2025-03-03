@@ -4,8 +4,10 @@ var db = require('../config/db.config.js');
 var Request = db.requests;
 
 exports.findAll = (req, res) => {
+    var SQL = `SELECT r.id, g.name as "card", r.status, r.updatedAt, s.title, r.createdAt, r.postamat_drop_code, r.postamat_pickup_code, u.name FROM requests r JOIN gpus g ON r.gpu_id = g.id JOIN services s ON r.service_id = s.id JOIN postamats p ON p.id = r.postamat_id JOIN users u ON u.id = r.user_id`; 
+    console.log(SQL);
     db.sequelize.query(
-        `SELECT * FROM requests`, { 
+        SQL, { 
             type: db.sequelize.QueryTypes.SELECT
         })
         .then(objects => {
@@ -16,18 +18,29 @@ exports.findAll = (req, res) => {
         });
 };
 
+
+const generateCode = () => {
+  return Math.floor(100000 + Math.random() * 900000).toString();  // Генерация случайного 6-значного числа
+};
+
 exports.create = (req, res) => {
+
+    // Генерация случайных кодов
+     const postamat_drop_code = generateCode();
+     const postamat_pickup_code = generateCode();
+     console.log(req.body);
     Request.create({
         user_id: req.body.user_id,
         service_id: req.body.service_id,
         postamat_id: req.body.postamat_id,
         gpu_id: req.body.gpu_id,
-        status: req.body.status,
-        postamat_drop_code: req.body.postamat_drop_code,
-        postamat_pickup_code: req.body.postamat_pickup_code
+        status: "created",  
+        postamat_drop_code: postamat_drop_code,
+        postamat_pickup_code: postamat_pickup_code,
     }).then(object => {
         globalFunctions.sendResult(res, object);
     }).catch(err => {
+        console.log(err);
         globalFunctions.sendError(res, err);
     });
 };
@@ -89,13 +102,16 @@ exports.findByStatus = (req, res) => {
 };
 
 exports.findByUserId = (req, res) => {
-    Request.findAll({
-        where: {
-            user_id: req.params.user_id
-        }
-    }).then(objects => {
-        globalFunctions.sendResult(res, objects);
-    }).catch(err => {
-        globalFunctions.sendError(res, err);
-    });
+    var SQL = `SELECT s.id as "service_id", g.name as "card", r.status, r.updatedAt, s.title, r.createdAt, r.postamat_drop_code, r.postamat_pickup_code FROM requests r JOIN gpus g ON r.gpu_id = g.id JOIN services s ON r.service_id = s.id JOIN postamats p ON p.id = r.postamat_id WHERE r.user_id = ` + req.params.user_id; 
+    console.log(SQL);
+    db.sequelize.query(
+        SQL, { 
+            type: db.sequelize.QueryTypes.SELECT
+        })
+        .then(objects => {
+            globalFunctions.sendResult(res, objects);
+        })
+        .catch(err => {
+            globalFunctions.sendError(res, err);
+        });
 };

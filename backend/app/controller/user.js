@@ -22,6 +22,8 @@ exports.create = (req, res) => {
         name: req.body.name,
         password: req.body.password,
         phone_number: req.body.phone_number,
+        isAdmin: 0,
+        email: req.body.email,
     }).then(object => {
         globalFunctions.sendResult(res, object);
     }).catch(err => {
