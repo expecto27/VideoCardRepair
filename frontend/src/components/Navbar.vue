@@ -2,8 +2,10 @@
   <div id="app">
     <nav class="navbar">
       <h1 class="logo">CYBER MASTER</h1>
+      <p class="contact-number">📞 +7 (900) 123-45-67</p>
       <div class="nav-links">
-        <router-link v-if="currentUser.isAdmin == 1" class="nav-link" to="/admin">Админ панель</router-link>
+        
+        <router-link v-if="currentUser?.isAdmin == 1" class="nav-link" to="/admin">Админ панель</router-link>
         <router-link class="nav-link" to="/mainPage">Главная</router-link>
         <router-link class="nav-link" to="/listService">Наши услуги</router-link>
         <router-link class="nav-link" to="/postmatMap">Карта постаматов</router-link>
@@ -33,7 +35,6 @@ export default {
     name: "NavBar",
     data() {
         return {};
-
     },
     computed: { 
         currentUser() {

@@ -6,8 +6,9 @@
         <h5 class="service-name">{{ service.title }}</h5>
         <p class="service-description">{{ service.description }}</p>
         <p class="service-price">{{ service.price }} ₽</p>
-        <router-link class="admin-button" v-if="currentUser.isAdmin == 1" :to="{name: 'edit-service', params: {id: service.id}}" ><button class="service-button">Редактировать</button></router-link>
-        <router-link :to="{name: 'add-request', params: {id: service.id}}" ><button class="service-button">Открыть</button></router-link>
+        <router-link class="admin-button" v-if="currentUser?.isAdmin == 1" :to="{name: 'edit-service', params: {id: service.id}}" ><button class="service-button">Редактировать</button></router-link>
+        <router-link  v-if="currentUser" :to="{name: 'add-request', params: {id: service.id}}" ><button class="service-button">Открыть</button></router-link>
+        <router-link  v-else to="/login" ><button class="service-button">Войти в аккаунт</button></router-link>
       </div>
     </div>
   </div>
@@ -24,8 +25,9 @@ export default {
   },
   computed: {
     currentUser() {
+      console.log("Текущий пользователь:", this.$store.state.auth.user);
       return this.$store.state.auth.user;
-    }
+  }
   },
   methods: {
     getServices() {
