@@ -44,7 +44,6 @@
             </div>
           </div>
         </div>
-        <button class="button">Список услуг</button>
       </div>
   
       <div class="how-it-works">
