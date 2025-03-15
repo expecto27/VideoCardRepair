@@ -10,7 +10,7 @@ function login(user) {
         .post("/login", data)
         .then(response => {
             if (response.data.accessToken) {
-                // записываем данные пользователя в локальное хранилище, которое находится в браузере
+                // записываем данные пользователя в локальное хранилище
                 localStorage.setItem('user', JSON.stringify(response.data));
             }
             return response.data;
@@ -34,9 +34,22 @@ function register(user) {
     return http.post("/register", data);
 }
 
-// обработка обновления токена
-// на стороне сервера установили время действия токена, если после указанного времени пользователь всё ещё работает в системе,
-// то нужно сгенерировать другой токен
+// обработка подтверждения кода
+function verifyCode(data) {
+    return http
+        .post("/verifyCode", data)
+        .then(response => {
+            if (response.data.success) {
+                localStorage.setItem("verificationStatus", "verified");
+            }
+            return response.data;
+        })
+        .catch(error => {
+            throw error;
+        });
+}
+
+// обновление токена
 function refreshToken(user) {
     var data = {
         name: user.name
@@ -45,13 +58,13 @@ function refreshToken(user) {
         .post("/refreshToken", data)
         .then(response => {
             if (response.data.accessToken) {
-                localStorage.setItem('user', JSON.stringify(response.data));// записываем данные пользователя в локальное хранилище, которое хранится в браузере
+                localStorage.setItem('user', JSON.stringify(response.data)); // записываем данные пользователя в локальное хранилище
             }
             return response.data;
         });
 }
 
-// декодируем токен jwt, чтобы в вызывающем методе использовать время (понадобится для проверки срока действия токена)
+// декодируем токен jwt
 function jwtDecrypt(token) {
     var base64Url = token.split(".")[1];
     var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
@@ -68,9 +81,6 @@ function jwtDecrypt(token) {
 
 // проверяем срока действия токена
 function tokenAlive(exp) {
-    // Date.now() - возвращает дату сразу в виде миллисекунд
-    // exp - время из JWT токена по формату Unix Time
-    // Чтобы сравнить время, нужно exp перевести в миллисекунды
     if (Date.now() >= exp * 1000) {
         return false;
     }
@@ -78,10 +88,11 @@ function tokenAlive(exp) {
 }
 
 export default {
-    login: login,
-    logout: logout,
-    register: register,
-    refreshToken: refreshToken,
-    jwtDecrypt: jwtDecrypt,
-    tokenAlive: tokenAlive
+    register,
+    verifyCode,
+    login,
+    logout,
+    refreshToken,
+    jwtDecrypt,
+    tokenAlive
 };

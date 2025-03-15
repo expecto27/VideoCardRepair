@@ -30,10 +30,9 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       defaultValue: 0
     },
-    verification_code: {      
+    verification_code: {
       type: DataTypes.STRING(6),
-      allowNull: true,
-      defaultValue: null
+      allowNull: true
     },
     is_verified: {
       type: DataTypes.BOOLEAN,

@@ -18,4 +18,6 @@ module.exports = (app) => {
     app.post("/api/refreshToken", auth.refreshToken);
 
     app.get("/api/userBoard", [authJwt.verifyToken], auth.userBoard);
+
+    app.post("/api/verifyCode", auth.verifyCode);
 };

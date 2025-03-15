@@ -5,24 +5,6 @@ var globalFunctions = require('../config/global.fuctions');
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
-exports.register = (req, res) => {
-    var SQL = `INSERT INTO \`users\` (\`phone_number\`, \`name\`, \`email\`, \`password\`, \`isAdmin\`)  VALUES('${req.body.phone}', '${req.body.name}', '${req.body.email}', '${bcrypt.hashSync(req.body.password, 10)}', 0)`;
-    console.log(SQL);
-    db.sequelize.query(
-        SQL, { 
-                type: db.sequelize.QueryTypes.INSERT
-        })
-        .then(() => {
-            var result = {
-                message: "Пользователь зарегистрирован"
-            };
-            globalFunctions.sendResult(res, result);
-        })
-        .catch(err => {
-            globalFunctions.sendError(res, err);
-        });
-};
-
 exports.login = (req, res) => {
     console.log("findOne" + req.body.name);
     User.findOne({
@@ -98,4 +80,69 @@ exports.refreshToken = (req, res) => {
 // проверка, что пользователь авторизован
 exports.userBoard = (req, res) => {
     globalFunctions.sendResult(res, "Пользователь авторизован");
+};
+
+const nodemailer = require("nodemailer");
+
+// Функция для генерации кода
+function generateCode() {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
+// Настройка почтового сервера
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "cybermaster.videocard@gmail.com", // Укажи свою почту
+        pass: "vges rwom glqb givg" // Пароль от приложения (не основной пароль!)
+    }
+});
+
+exports.register = async (req, res) => {
+    try {
+        const verificationCode = generateCode();
+
+        const SQL = `INSERT INTO users (phone_number, name, email, password, isAdmin, verification_code, is_verified) 
+                     VALUES('${req.body.phone}', '${req.body.name}', '${req.body.email}', 
+                     '${bcrypt.hashSync(req.body.password, 10)}', 0, '${verificationCode}', 0)`;
+
+        await db.sequelize.query(SQL, { type: db.sequelize.QueryTypes.INSERT });
+
+        // Отправляем email с кодом
+        await transporter.sendMail({
+            from: '"GPU Repair" cybermaster.videocard@gmail.com',
+            to: req.body.email,
+            subject: "Подтверждение регистрации",
+            text: `Ваш код подтверждения: ${verificationCode}`,
+        });
+
+        res.status(200).send({ message: "Пользователь зарегистрирован. Проверьте почту для подтверждения." });
+    } catch (err) {
+        res.status(500).send({ message: "Ошибка при регистрации." });
+    }
+};
+
+
+exports.verifyCode = async (req, res) => {
+    try {
+        const { email, code } = req.body;
+        
+        const user = await User.findOne({ where: { email } });
+
+        if (!user) {
+            return res.status(404).send({ message: "Пользователь не найден" });
+        }
+        console.log(user.verification_code + "AAAAA");
+        console.log(code + "BBBBB");
+        if (user.verification_code !== code) {
+            return res.status(400).send({ message: "Неверный код" });
+        }
+
+        // Обновляем статус верификации
+        await user.update({ is_verified: true, verification_code: null });
+
+        res.status(200).send({ message: "Email подтвержден!" });
+    } catch (err) {
+        res.status(500).send({ message: "Ошибка подтверждения." });
+    }
 };
