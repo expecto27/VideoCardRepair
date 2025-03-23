@@ -119,7 +119,7 @@
           });
       },
       updateRequest(request) {
-        http.post(`/updateRequest/${request.id}`, { status: request.status })
+        http.post(`/updateRequest/${request.id}`, { status: request.status, user_id: request.user_id })
           .then(() => {
             this.fetchRequests();
             console.log("Статус обновлен");

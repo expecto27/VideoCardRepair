@@ -102,6 +102,7 @@ export default {
           this.verificationStep = true; // Показываем поле ввода кода
         })
         .catch(e => {
+          console.log()
           this.errorMessage = e.response.data.message;
         });
     },
@@ -113,7 +114,10 @@ export default {
       })
         .then(() => {
           this.successMessage = "Email подтвержден!";
-          this.$router.push("/login");
+          this.$store.dispatch("auth/login", this.user)
+            .then(() => {
+                window.location.href = '/mainPage'; 
+            });
         })
         .catch(e => {
           this.errorMessage = e.response.data.message;

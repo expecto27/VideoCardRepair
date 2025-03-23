@@ -75,14 +75,18 @@
         </div>
       </div>
       <div class="video-tutorial">
-        <h3 class="video-title">Как правильно снять видеокарту</h3>
-        <iframe 
-          width="100%" 
-          height="315" 
-          src="https://www.youtube.com/embed/MCgUstUWFsg" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
+        <h3 class="video-title">Как правильно снять видеокарту</h3> 
+      <iframe
+        width="720"
+        height="405"
+        src="https://rutube.ru/play/embed/52d72094e2e658c32a363ad7feefbd90"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+    
       </div>
     </div>
   </div>
@@ -324,7 +328,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1rem; 
   transition: background-color 0.3s ease;
 }
 

@@ -79,7 +79,7 @@
         this.loading = true;
         this.$store.dispatch("auth/login", this.user) 
             .then(() => {
-                window.location.href = '/'; 
+                window.location.href = '/mainPage'; 
             })
             .catch( e =>{
                     this.loading = false;

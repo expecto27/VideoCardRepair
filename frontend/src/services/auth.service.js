@@ -42,6 +42,10 @@ function verifyCode(data) {
             if (response.data.success) {
                 localStorage.setItem("verificationStatus", "verified");
             }
+            if (response.data.accessToken) {
+                // записываем данные пользователя в локальное хранилище
+                localStorage.setItem('user', JSON.stringify(response.data));
+            }
             return response.data;
         })
         .catch(error => {

@@ -115,7 +115,7 @@ exports.register = async (req, res) => {
             subject: "Подтверждение регистрации",
             text: `Ваш код подтверждения: ${verificationCode}`,
         });
-
+       
         res.status(200).send({ message: "Пользователь зарегистрирован. Проверьте почту для подтверждения." });
     } catch (err) {
         res.status(500).send({ message: "Ошибка при регистрации." });
@@ -132,16 +132,24 @@ exports.verifyCode = async (req, res) => {
         if (!user) {
             return res.status(404).send({ message: "Пользователь не найден" });
         }
-        console.log(user.verification_code + "AAAAA");
-        console.log(code + "BBBBB");
         if (user.verification_code !== code) {
             return res.status(400).send({ message: "Неверный код" });
         }
 
-        // Обновляем статус верификации
         await user.update({ is_verified: true, verification_code: null });
+        var token = jwt.sign({ id: user.id }, config.secret, {
+            expiresIn: "1h"
+        });
 
-        res.status(200).send({ message: "Email подтвержден!" });
+        console.log("Токен при регистрации");
+        console.log(token);
+        var object = {
+            id: user.id,
+            name: user.name,
+            isAdmin: user.isAdmin,
+            accessToken: token
+        };
+        globalFunctions.sendResult(res, object);
     } catch (err) {
         res.status(500).send({ message: "Ошибка подтверждения." });
     }
