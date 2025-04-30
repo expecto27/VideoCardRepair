@@ -75,7 +75,7 @@
         http
           .get("/reviews")
           .then(response => {
-            this.reviews = response.data;
+            this.reviews = response.data.reverse();
             this.calculateRatingsCount();
           })
           .catch(e => {
