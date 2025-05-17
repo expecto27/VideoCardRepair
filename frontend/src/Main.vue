@@ -195,7 +195,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Benzin&family=Orbitron:wght@400;700&display=swap');
   /* Общие стили для всех блоков */
 
-  .privacy-policy {
+.privacy-policy {
   background: #2c3338;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -218,7 +218,7 @@
 }
 
 .privacy-content {
-  color: #b0b0b0;
+  color: #ffffff;
   line-height: 1.6;
   text-align: center;
 }
