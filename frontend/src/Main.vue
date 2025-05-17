@@ -588,7 +588,7 @@
 
 .documentation-text {
   flex: 1;
-  color: #b0b0b0;
+  color: #ffffff;
   line-height: 1.6;
 }
 
