@@ -630,7 +630,7 @@
 .additional-info {
   margin-top: 25px;
   font-style: italic;
-  color: #8a8a8a;
+  color: #ffffff;
 }
 
 /* Адаптивность */
