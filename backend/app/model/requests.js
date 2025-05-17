@@ -52,11 +52,27 @@ module.exports = function(sequelize, DataTypes) {
         model: 'gpus',
         key: 'id'
       }
+    },
+    photo_path: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      comment: "Путь к прикрепленному изображению"
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
     }
   }, {
     sequelize,
     tableName: 'requests',
     timestamps: true,
+    underscored: true,
     indexes: [
       {
         name: "PRIMARY",
