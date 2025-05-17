@@ -20,7 +20,7 @@
             <div class="stat-item">
               <img src="@/assets/chip-icon.svg" alt="Chip" class="stat-icon" />
               <span class="stat-value">5000+</span>
-              <span class="stat-label">Починенных видеокарт</span>
+              <span class="stat-label">Восстановили работу тысячи видеокарт</span>
             </div>
             <div class="stat-item">
               <img src="@/assets/tools-icon.svg" alt="Tools" class="stat-icon" />
