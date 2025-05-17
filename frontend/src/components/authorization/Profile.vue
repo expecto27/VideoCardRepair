@@ -16,6 +16,7 @@
     <table v-if="requests.length" class="table">
       <thead>
         <tr>
+          <th>Фото</th>
           <th>Видеокарта</th>
           <th>Услуга</th>
           <th>Дата создания</th>
@@ -28,6 +29,14 @@
       </thead>
       <tbody>
         <tr v-for="request in requests" :key="request.id">
+          <td>
+            <img
+              :src="getImageUrl(request.photo_path)"
+              alt="Фото видеокарты"
+              class="request-photo"
+              @error="handleImageError($event)"
+            />
+          </td>
           <td>{{ request.card }}</td>
           <td>{{ request.title }}</td>
           <td>{{ request.createdAt }}</td>
@@ -67,12 +76,21 @@ export default {
       http
         .get(`requests/user/${userId}`)
         .then(response => {
+          console.log(response.data);
           this.requests = response.data;
         })
         .catch(e => {
           console.log(e);
         });
     },
+    getImageUrl(photoPath) {
+      console.log(`http://localhost:3000/${photoPath}`);
+      if (!photoPath) return '/default-placeholder.png';
+      return `http://localhost:3000/${photoPath}`;
+    },
+    handleImageError(event) {
+      event.target.src = '/default-placeholder.png';
+    }
   },
   mounted() {
     if (!this.currentUser) {
@@ -154,5 +172,13 @@ export default {
 
 .table button:hover {
   background-color: #0056b3;
+}
+
+.request-photo {
+  max-width: 100px;
+  max-height: 80px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 </style>

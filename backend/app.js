@@ -17,6 +17,8 @@ var corsOptions = {
     optionSuccessStatus: 200 
 };
 
+const path = require('path');
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cors(corsOptions));
 var user = require('./app/route/user');
 user(app);
