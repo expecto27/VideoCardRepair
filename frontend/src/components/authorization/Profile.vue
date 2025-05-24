@@ -45,7 +45,9 @@
           <td>{{ request.postamat_drop_code }}</td>
           <td>{{ request.postamat_pickup_code }}</td>
           <td>
-            <router-link v-if="request.status === 'completed'" :to="'/add-review/' + request.service_id">
+            <router-link
+              v-if="request.status === 'completed' && !hasReview(request.service_id)"
+                :to="'/add-review/' + request.service_id" >
               <button class="btn btn-primary">Оставить отзыв</button>
             </router-link>
           </td>
@@ -63,6 +65,7 @@ export default {
   data() {
     return {
       requests: [], 
+      userReviews: [],
     };
   },
   computed: {
@@ -83,6 +86,14 @@ export default {
           console.log(e);
         });
     },
+    getUserReviews() {
+    const userId = this.currentUser.id;
+    http.get(`/reviewUser/${userId}`)
+      .then(response => {
+        this.userReviews = response.data;
+      })
+      .catch(e => console.error(e));
+    },
     getImageUrl(photoPath) {
       console.log(`http://localhost:3000/${photoPath}`);
       if (!photoPath) return '/default-placeholder.png';
@@ -90,13 +101,17 @@ export default {
     },
     handleImageError(event) {
       event.target.src = '/default-placeholder.png';
-    }
+    },
+    hasReview(serviceId) {
+      return this.userReviews.some(review => review.service_id === serviceId);
+    },
   },
   mounted() {
     if (!this.currentUser) {
       this.$router.push('/login');
     } else {
       this.getRequests(); 
+      this.getUserReviews();
     }
   }
 };

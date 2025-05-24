@@ -78,3 +78,29 @@ exports.findById = (req, res) => {
             globalFunctions.sendError(res, err);
         })
 };
+
+exports.findByServiceId = (req, res) => {
+    db.sequelize.query(
+        `SELECT * FROM reviews r WHERE r.service_id =` + req.params.id, {
+            type: db.sequelize.QueryTypes.SELECT
+        })
+        .then(objects => {
+            globalFunctions.sendResult(res, objects);
+        })
+        .catch(err => {
+            globalFunctions.sendError(res, err);
+        })
+}
+
+exports.findByUserId = (req, res) => {
+    db.sequelize.query(
+        `SELECT * FROM reviews r WHERE r.user_id =` + req.params.id, {
+            type: db.sequelize.QueryTypes.SELECT
+        })
+        .then(objects => {
+            globalFunctions.sendResult(res, objects);
+        })
+        .catch(err => {
+            globalFunctions.sendError(res, err);
+        })
+}
