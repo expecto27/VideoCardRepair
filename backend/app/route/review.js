@@ -7,4 +7,6 @@ module.exports = (app) => {
     app.post('/api/updateReview/:id', review.update); 
     app.post('/api/deleteReview/:id', review.delete); 
     app.get('/api/review/:id', review.findById); 
+    app.get('/api/reviewService/:id', review.findByServiceId); 
+    app.get('/api/reviewUser/:id', review.findByUserId); 
 };
