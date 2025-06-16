@@ -16,6 +16,7 @@
             Наши специалисты работают с оборудованием любого уровня сложности, 
             обеспечивая высокое качество и надежность ремонта.
           </p>
+          <p class="experience-description">Мы находимся по адресу: ул. Кирова, д. 31</p>
           <div class="experience-stats">
             <div class="stat-item">
               <img src="@/assets/chip-icon.svg" alt="Chip" class="stat-icon" />
@@ -153,28 +154,9 @@
           >
             Скачать
           </a>
-          <button @click="showPdfModal = true" class="view-button">
-            Просмотреть
-          </button>
         </div>
       </div>
     </div>
-
-    <div v-if="showPdfModal" class="pdf-modal" @click.self="showPdfModal = false">
-    <div class="pdf-modal-content">
-      <button @click="showPdfModal = false" class="close-button">
-        &times;
-      </button>
-      <object
-        v-if="showPdfModal"
-        :data="pdfUrl + '#view=FitH'"
-        type="application/pdf"
-        class="pdf-viewer"
-      >
-        <p>Ваш браузер не поддерживает просмотр PDF. Вы можете <a :href="pdfUrl" download>скачать файл</a>.</p>
-      </object>
-    </div>
-  </div>
 
   </div>
   </template>
