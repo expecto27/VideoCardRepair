@@ -144,6 +144,7 @@ export default {
       http.get("/requests")
         .then(response => {
           this.requests = response.data;
+          console.log(response.data);
         })
         .catch(error => {
           console.error("Ошибка загрузки заказов:", error);
@@ -152,7 +153,8 @@ export default {
     updateRequest(request) {
       http.post(`/updateRequest/${request.id}`, {
         status: request.status,
-        user_id: request.user_id
+        user_id: request.user_id,
+        price: request.price
       })
         .then(() => {
           this.fetchRequests();
@@ -231,7 +233,6 @@ export default {
 </script>
 
 <style scoped>
-/* Оставляем ваш оригинальный CSS без изменений */
 .admin-panel {
   width: 80%;
   margin: 40px auto;
