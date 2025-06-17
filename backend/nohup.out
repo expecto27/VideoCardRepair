@@ -1,0 +1,651 @@
+
+> cyber-master@1.0.0 start
+> nodemon app.js
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node app.js`[39m
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'gpus' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `gpus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'services' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `services`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'postamats' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `postamats`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'requests' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `requests`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'payments' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `payments`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'reviews' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `reviews`
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+
+> cyber-master@1.0.0 start
+> nodemon app.js
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node app.js`[39m
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'gpus' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `gpus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'services' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `services`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'postamats' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `postamats`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'requests' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `requests`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'payments' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `payments`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'reviews' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `reviews`
+Executing (default): SELECT * FROM services
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] starting `node app.js`[39m
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+    at listenInCluster (node:net:1996:12)
+    at Server.listen (node:net:2101:7)
+    at Function.listen (/root/video/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/root/video/backend/app.js:11:5)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1975:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'gpus' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `gpus`
+
+Node.js v22.16.0
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'services' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `services`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'postamats' AND TABLE_SCHEMA = 'cyber'
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+Executing (default): SHOW INDEX FROM `postamats`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'requests' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `requests`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'payments' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `payments`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'reviews' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `reviews`
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] starting `node app.js`[39m
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'gpus' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `gpus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `users`
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+    at listenInCluster (node:net:1996:12)
+    at Server.listen (node:net:2101:7)
+    at Function.listen (/root/video/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/root/video/backend/app.js:11:5)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1975:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.16.0
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'services' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `services`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'postamats' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `postamats`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'requests' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `requests`
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'payments' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `payments`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'reviews' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `reviews`
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] restarting child process[39m
+
+> cyber-master@1.0.0 start
+> nodemon app.js
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node app.js`[39m
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'gpus' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `gpus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'services' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `services`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'postamats' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `postamats`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'requests' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `requests`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'payments' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `payments`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'reviews' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `reviews`
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'gpus' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `gpus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'services' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `services`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'postamats' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `postamats`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'requests' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `requests`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'payments' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `payments`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'reviews' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `reviews`
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+
+> cyber-master@1.0.0 start
+> nodemon app.js
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node app.js`[39m
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'gpus' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `gpus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'services' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `services`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'postamats' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `postamats`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'requests' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `requests`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'payments' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `payments`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'reviews' AND TABLE_SCHEMA = 'cyber'
+Executing (default): SHOW INDEX FROM `reviews`
+Executing (default): SELECT * FROM services
+Executing (default): SELECT `id`, `latitude`, `longitude`, `availability`, `address` FROM `postamats` AS `postamats`;
+Executing (default): SELECT * FROM services
+Executing (default): SELECT * FROM services
+Executing (default): SELECT * FROM gpus
+Executing (default): SELECT `id`, `latitude`, `longitude`, `availability`, `address` FROM `postamats` AS `postamats`;
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`id` = '32';
+Executing (default): INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);
+Ошибка при создании заявки: Error
+    at Query.run (/root/video/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/video/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.insert (/root/video/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/root/video/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async requests.create (/root/video/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/video/backend/app/controller/request.js:115:25 {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '120439',
+      '0',
+      '3',
+      'uploads/requests/request-0bf4983c-5488-4130-9fba-4a8a9a83123a.png',
+      '2025-06-17 16:27:50',
+      '2025-06-17 16:27:50'
+    ]
+  },
+  original: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '120439',
+      '0',
+      '3',
+      'uploads/requests/request-0bf4983c-5488-4130-9fba-4a8a9a83123a.png',
+      '2025-06-17 16:27:50',
+      '2025-06-17 16:27:50'
+    ]
+  },
+  sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    '32',
+    '2',
+    '1',
+    'created',
+    '120439',
+    '0',
+    '3',
+    'uploads/requests/request-0bf4983c-5488-4130-9fba-4a8a9a83123a.png',
+    '2025-06-17 16:27:50',
+    '2025-06-17 16:27:50'
+  ]
+}
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`id` = '32';
+Executing (default): INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);
+Ошибка при создании заявки: Error
+    at Query.run (/root/video/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/video/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.insert (/root/video/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/root/video/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async requests.create (/root/video/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/video/backend/app/controller/request.js:115:25 {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '223481',
+      '0',
+      '3',
+      'uploads/requests/request-370e46f3-c9c9-4dca-99db-4a247556f187.png',
+      '2025-06-17 16:27:57',
+      '2025-06-17 16:27:57'
+    ]
+  },
+  original: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '223481',
+      '0',
+      '3',
+      'uploads/requests/request-370e46f3-c9c9-4dca-99db-4a247556f187.png',
+      '2025-06-17 16:27:57',
+      '2025-06-17 16:27:57'
+    ]
+  },
+  sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    '32',
+    '2',
+    '1',
+    'created',
+    '223481',
+    '0',
+    '3',
+    'uploads/requests/request-370e46f3-c9c9-4dca-99db-4a247556f187.png',
+    '2025-06-17 16:27:57',
+    '2025-06-17 16:27:57'
+  ]
+}
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`id` = '32';
+Executing (default): INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);
+Ошибка при создании заявки: Error
+    at Query.run (/root/video/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/video/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.insert (/root/video/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/root/video/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async requests.create (/root/video/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/video/backend/app/controller/request.js:115:25 {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '811482',
+      '0',
+      '3',
+      'uploads/requests/request-9601e8f5-2ef8-4145-8851-d97b6b2de168.png',
+      '2025-06-17 16:28:15',
+      '2025-06-17 16:28:15'
+    ]
+  },
+  original: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '811482',
+      '0',
+      '3',
+      'uploads/requests/request-9601e8f5-2ef8-4145-8851-d97b6b2de168.png',
+      '2025-06-17 16:28:15',
+      '2025-06-17 16:28:15'
+    ]
+  },
+  sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    '32',
+    '2',
+    '1',
+    'created',
+    '811482',
+    '0',
+    '3',
+    'uploads/requests/request-9601e8f5-2ef8-4145-8851-d97b6b2de168.png',
+    '2025-06-17 16:28:15',
+    '2025-06-17 16:28:15'
+  ]
+}
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`id` = '32';
+Executing (default): INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);
+Ошибка при создании заявки: Error
+    at Query.run (/root/video/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/video/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.insert (/root/video/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/root/video/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async requests.create (/root/video/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/video/backend/app/controller/request.js:115:25 {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '821131',
+      '0',
+      '3',
+      'uploads/requests/request-57a8f151-32bf-43d0-b1d6-44c6f2f6f25c.png',
+      '2025-06-17 16:29:12',
+      '2025-06-17 16:29:12'
+    ]
+  },
+  original: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '32',
+      '2',
+      '1',
+      'created',
+      '821131',
+      '0',
+      '3',
+      'uploads/requests/request-57a8f151-32bf-43d0-b1d6-44c6f2f6f25c.png',
+      '2025-06-17 16:29:12',
+      '2025-06-17 16:29:12'
+    ]
+  },
+  sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    '32',
+    '2',
+    '1',
+    'created',
+    '821131',
+    '0',
+    '3',
+    'uploads/requests/request-57a8f151-32bf-43d0-b1d6-44c6f2f6f25c.png',
+    '2025-06-17 16:29:12',
+    '2025-06-17 16:29:12'
+  ]
+}
+Executing (default): SELECT * FROM services
+Executing (default): SELECT * FROM services
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`phone_number` = '89016737384';
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`email` = 'expeo@vk.com' LIMIT 1;
+Executing (default): INSERT INTO users (phone_number, name, email, password, isAdmin, verification_code, is_verified) 
+                     VALUES('89016737384', 'expeoo', 'expeo@vk.com', 
+                     '$2b$10$prH7fNmhkBoC0HikoE.xte5g/.sP1JMGfm0zDC5LIMFWJPfbqTzXG', 0, '165695', 0)
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`email` = 'expeo@vk.com' LIMIT 1;
+Executing (default): UPDATE `users` SET `is_verified`=?,`verification_code`=? WHERE `id` = ?
+Токен при регистрации
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzMsImlhdCI6MTc1MDE3Nzg2MSwiZXhwIjoxNzUwMTgxNDYxfQ.LUHkkhe6Pe3AYJRiGhPl33QFmaAqieLlmJKeOGD99ug
+findOneexpeoo
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`name` = 'expeoo' LIMIT 1;
+Токен при авторизации
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzMsImlhdCI6MTc1MDE3Nzg2MSwiZXhwIjoxNzUwMTgxNDYxfQ.LUHkkhe6Pe3AYJRiGhPl33QFmaAqieLlmJKeOGD99ug
+Executing (default): SELECT * FROM services
+Executing (default): SELECT * FROM services
+Executing (default): SELECT `id`, `latitude`, `longitude`, `availability`, `address` FROM `postamats` AS `postamats`;
+Executing (default): SELECT * FROM gpus
+Executing (default): SELECT `id`, `phone_number`, `name`, `email`, `password`, `isAdmin`, `verification_code`, `is_verified` FROM `users` AS `users` WHERE `users`.`id` = '33';
+Executing (default): INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);
+Ошибка при создании заявки: Error
+    at Query.run (/root/video/backend/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /root/video/backend/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.insert (/root/video/backend/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/root/video/backend/node_modules/sequelize/lib/model.js:2490:35)
+    at async requests.create (/root/video/backend/node_modules/sequelize/lib/model.js:1362:12)
+    at async /root/video/backend/app/controller/request.js:115:25 {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '33',
+      '2',
+      '2',
+      'created',
+      '314166',
+      '0',
+      '2',
+      'uploads/requests/request-b34444b8-59b9-4bce-ab62-5e92fd0ab889.jpg',
+      '2025-06-17 16:31:50',
+      '2025-06-17 16:31:50'
+    ]
+  },
+  original: Error: Unknown column 'photo_path' in 'field list'
+      at Packet.asError (/root/video/backend/node_modules/mysql2/lib/packets/packet.js:740:17)
+      at Prepare.execute (/root/video/backend/node_modules/mysql2/lib/commands/command.js:29:26)
+      at Connection.handlePacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:475:34)
+      at PacketParser.onPacket (/root/video/backend/node_modules/mysql2/lib/base/connection.js:93:12)
+      at PacketParser.executeStart (/root/video/backend/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/root/video/backend/node_modules/mysql2/lib/base/connection.js:100:25)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'photo_path' in 'field list'",
+    sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      '33',
+      '2',
+      '2',
+      'created',
+      '314166',
+      '0',
+      '2',
+      'uploads/requests/request-b34444b8-59b9-4bce-ab62-5e92fd0ab889.jpg',
+      '2025-06-17 16:31:50',
+      '2025-06-17 16:31:50'
+    ]
+  },
+  sql: 'INSERT INTO `requests` (`id`,`user_id`,`service_id`,`postamat_id`,`status`,`postamat_drop_code`,`postamat_pickup_code`,`gpu_id`,`photo_path`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    '33',
+    '2',
+    '2',
+    'created',
+    '314166',
+    '0',
+    '2',
+    'uploads/requests/request-b34444b8-59b9-4bce-ab62-5e92fd0ab889.jpg',
+    '2025-06-17 16:31:50',
+    '2025-06-17 16:31:50'
+  ]
+}

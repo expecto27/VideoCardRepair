@@ -4,7 +4,7 @@ var User = db.users;
 var Request = db.requests;
 
 exports.findAll = (req, res) => {
-    var SQL = `SELECT r.id, s.price as "price", g.name as "card", r.status, r.updatedAt, s.title, r.createdAt, r.postamat_drop_code, r.postamat_pickup_code, u.name, u.id as user_id FROM requests r JOIN gpus g ON r.gpu_id = g.id JOIN services s ON r.service_id = s.id JOIN postamats p ON p.id = r.postamat_id JOIN users u ON u.id = r.user_id`; 
+    var SQL = `SELECT r.id, s.price as "price", g.name as "card", r.status, r.updated_at, s.title, r.created_at, r.postamat_drop_code, r.postamat_pickup_code, u.name, u.id as user_id FROM requests r JOIN gpus g ON r.gpu_id = g.id JOIN services s ON r.service_id = s.id JOIN postamats p ON p.id = r.postamat_id JOIN users u ON u.id = r.user_id`; 
     db.sequelize.query(
         SQL, { 
             type: db.sequelize.QueryTypes.SELECT
@@ -244,7 +244,7 @@ exports.findByStatus = (req, res) => {
 };
 
 exports.findByUserId = (req, res) => {
-    var SQL = `SELECT s.id as "service_id", s.price as "price", g.name as "card", r.status, r.updatedAt, s.title, r.createdAt, r.postamat_drop_code, r.postamat_pickup_code, r.photo_path FROM requests r JOIN gpus g ON r.gpu_id = g.id JOIN services s ON r.service_id = s.id JOIN postamats p ON p.id = r.postamat_id WHERE r.user_id = ` + req.params.user_id; 
+    var SQL = `SELECT s.id as "service_id", s.price as "price", g.name as "card", r.status, r.updated_at, s.title, r.created_at, r.postamat_drop_code, r.postamat_pickup_code, r.photo_path FROM requests r JOIN gpus g ON r.gpu_id = g.id JOIN services s ON r.service_id = s.id JOIN postamats p ON p.id = r.postamat_id WHERE r.user_id = ` + req.params.user_id; 
     console.log(SQL);
     db.sequelize.query(
         SQL, { 

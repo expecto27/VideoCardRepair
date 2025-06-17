@@ -95,9 +95,9 @@ export default {
       .catch(e => console.error(e));
     },
     getImageUrl(photoPath) {
-      console.log(`http://localhost:3000/${photoPath}`);
+      console.log(`http://109.206.241.53:3000/${photoPath}`);
       if (!photoPath) return '/default-placeholder.png';
-      return `http://localhost:3000/${photoPath}`;
+      return `http://109.206.241.53:3000/${photoPath}`;
     },
     handleImageError(event) {
       event.target.src = '/default-placeholder.png';
